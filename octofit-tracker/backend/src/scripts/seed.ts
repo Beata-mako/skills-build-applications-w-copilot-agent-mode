@@ -11,9 +11,11 @@ import Leaderboard from '../models/Leaderboard';
 import Workout from '../models/Workout';
 
 const MONGO_URI = 'mongodb://localhost:27017/octofit_db';
+const SEED_DESCRIPTION = 'Seed the octofit_db database with test data';
 
 async function seed() {
   try {
+    console.log(SEED_DESCRIPTION);
     await mongoose.connect(MONGO_URI);
     console.log('Connected to MongoDB');
 
@@ -67,7 +69,7 @@ async function seed() {
       { user: users[2]._id, score: 700, rank: 3 },
     ]);
 
-    console.log('Seed the octofit_db database with test data - DONE');
+    console.log(`${SEED_DESCRIPTION} - DONE`);
     process.exit(0);
   } catch (err) {
     console.error('Seeding error:', err);
