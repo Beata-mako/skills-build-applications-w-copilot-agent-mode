@@ -32,7 +32,7 @@ function Leaderboard() {
       return apiPath
     }
 
-    return `https://${codespaceName}-8000.app.github.dev${apiPath}`
+    return `https://${codespaceName}-8000.app.github.dev/api/leaderboard/`
   }, [])
 
   useEffect(() => {

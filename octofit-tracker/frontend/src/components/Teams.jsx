@@ -28,7 +28,7 @@ function Teams() {
       return apiPath
     }
 
-    return `https://${codespaceName}-8000.app.github.dev${apiPath}`
+    return `https://${codespaceName}-8000.app.github.dev/api/teams/`
   }, [])
 
   useEffect(() => {
